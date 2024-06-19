@@ -3,24 +3,24 @@
 
 #AIM
 /*
-- To perform complex data cleaning process, such as transaction, convert column's values, and more
-- To be able to absorb informations from the given sales report, such as various property types, property that sold the most, prices range, etc.
+- To perform complex data cleaning processes using TRANSACTION, UPDATE, and ALTER TABLE
+- To absorb information from the given sales report, such as various property types, property that sold the most, price range, etc.
 */
 
 #SUMMARY
 /*
 DATA CLEANING
-1. Re-sorting the `No.` column and set it to primary key and auto increment for auto update numbers.
+1. Re-sorting the `No.` column and setting it to primary key and auto-increment for auto-update numbers.
 2. Converting column values
 3. Reformating "TYPE" column values to be more readable
 
 DATA EXPLORATION
 1. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
-2. Houses are the highest-demand property, with 10,723 sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
-3. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 in 2017, a rise of 2,251 properties.
-4. Reservoir is the most desirable area, with 471 properties sold, and it has the lowest average price among the top 5 areas with the most sales.
+2. Houses are the highest-demand property, with 10,723 units sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
+3. Property sales in Melbourne increased from 6,978  properties sold in 2016 to 9,229 in 2017, a rise of 2,251 properties.
+4. Reservoir is the most desirable area, with 471 properties sold, and it has the lowest average price among the top 5 places with the most sales.
 5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
-6. Nelson is the most trusted seller, having sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments.
+6. Nelson is the most trusted seller, selling 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments.
 7. Hockingstuart/Advantage and Rosin have the lowest average price at $330,000, involving only 1 unit. Overall, PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
 */
 
