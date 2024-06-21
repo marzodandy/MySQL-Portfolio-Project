@@ -23,7 +23,7 @@ DATA EXPLORATION
    Unit/Apartment: $625,254.43
    Townhouse: $922,893.95
 4. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 sold properties in 2017, a rise of 2,251 properties.
-5. Reservoir has the highest amount of sold properties in Melbourne, with 471 properties sold. Followed by:
+5. Reservoir is the best-selling area in Melbourne, with 471 properties have been sold. Followed by:
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
@@ -71,8 +71,8 @@ SELECT *
 FROM melbourne_prop_sales
 WHERE Distance = '' AND Regionname = '';
 
--- TOP 5 MOST SOLD AREA
-SELECT Suburb, COUNT(Suburb) Amount_of_Sold
+-- TOP 5 BEST-SELLING AREA
+SELECT Suburb, COUNT(*) Amount_of_Sold
 FROM melbourne_prop_sales
 WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
 GROUP BY Suburb
