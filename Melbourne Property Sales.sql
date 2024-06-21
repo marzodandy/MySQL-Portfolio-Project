@@ -3,24 +3,33 @@
 
 #AIM
 /*
-- To perform complex data cleaning processes using TRANSACTION, UPDATE, and ALTER TABLE
-- To absorb information from the given sales report, such as various property types, property that sold the most, price range, etc.
+- To perform complex data cleaning process, such as transaction, convert column's values, and more
+- To be able to absorb informations from the given sales report, such as various property types, property that sold the most, prices range, etc.
 */
 
 #SUMMARY
 /*
 DATA CLEANING
-1. Re-sorting the `No.` column and setting it to primary key and auto-increment for auto-update numbers.
-2. Converting column values
-3. Reformating "TYPE" column values to be more readable
+1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto update numbers.
+2. Renaming column names
+3. Reformating "Type" column values to be more readable
+4. Equalize "Date" column length by adding leading 0 to the date so that the year can be extracted
 
 DATA EXPLORATION
-1. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
-2. Houses are the highest-demand property, with 10,723 units sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
-3. Property sales in Melbourne increased from 6,978  properties sold in 2016 to 9,229 in 2017, a rise of 2,251 properties.
-4. Reservoir is the most desirable area, with 471 properties sold, and it has the lowest average price among the top 5 places with the most sales.
+1. Southbank is the closest area to Melbourne Central Business District, with the distances of 0.7 km and 1.2 km.
+2. House is the highest-demand property, with 10,723 sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
+3. Average property prices based on their type:
+   House: $1,220,387.36
+   Unit/Apartment: $625,254.43
+   Townhouse: $922,893.95
+4. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 sold properties in 2017, a rise of 2,251 properties.
+5. Reservoir has the highest amount of sold properties in Melbourne, with 471 properties sold. Followed by:
+   Bentleigh East: 307 units,
+   Richmond: 293 units, and
+   Brunswick: 245 units
+6. Average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
 5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
-6. Nelson is the most trusted seller, selling 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments.
+6. Nelson is the most trusted seller. Having sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments with his average price of $1,000,709.
 7. Hockingstuart/Advantage and Rosin have the lowest average price at $330,000, involving only 1 unit. Overall, PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
 */
 
@@ -62,6 +71,14 @@ SELECT *
 FROM melbourne_prop_sales
 WHERE Distance = '' AND Regionname = '';
 
+-- TOP 5 MOST SOLD AREA
+SELECT Suburb, COUNT(Suburb) Amount_of_Sold
+FROM melbourne_prop_sales
+WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+GROUP BY Suburb
+ORDER BY Amount_of_Sold DESC
+LIMIT 5;
+
 #PROPERTY EXPLORATION
 SELECT DISTINCT(`Type`)
 FROM melbourne_prop_sales;
@@ -84,14 +101,14 @@ SET `Type` = CASE
 END;
 */
 
--- MOST BOUGHT PROPERTY TYPE 
-SELECT `Type`, COUNT(`Type`) Amount_of_Sold
+-- AMOUNT OF SOLD PROPERTIES WITH AVERAGE PRICE 
+SELECT `Type`, COUNT(`Type`) Amount_of_Sold, CONCAT('$', ROUND(AVG(Price),2)) Avg_Price
 FROM melbourne_prop_sales
 WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
 GROUP BY `Type`
 ORDER BY Amount_of_Sold DESC;
 
--- PROPERTY SOLD BASED ON YEAR
+-- SOLD PROPERTIES BASED ON YEAR
 /*REFORMATTING DATE COLUMN
 SELECT `No.`, LPAD(`Date`, 10, '0')
 FROM melbourne_prop_sales;
@@ -113,20 +130,7 @@ SELECT `year`.year_cvt 'Year', COUNT(*) Amount
 FROM `year`
 GROUP BY year_cvt;
 
--- MOST SOLD AREA
-SELECT Suburb, COUNT(Suburb) Amount_of_Sold
-FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
-GROUP BY Suburb
-ORDER BY Amount_of_Sold DESC
-LIMIT 5;
-
 #PRICES EXPLORATION
--- AVG PROPERTY PRICE BASED ON PROPERTY TYPE
-SELECT `Type`, CONCAT('$',ROUND(AVG(Price),2)) AVG_Price
-FROM melbourne_prop_sales
-GROUP BY `Type`;
-
 -- CHEAPEST PROPERTY SOLD IN THE AREA (SUBURB)
 SELECT Suburb, MIN(Price)
 FROM melbourne_prop_sales
@@ -134,7 +138,7 @@ WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
 GROUP BY Suburb
 ORDER BY MIN(Price);
 
--- AVG PRICE FOR THE TOP 5 MOST SOLD PROPERTIES IN THE SUBURB
+-- AVG SOLD PROPERTIES PRICE FOR THE TOP 5 SUBURB
 SELECT Suburb, COUNT(*) Amount_of_Sold, CONCAT('$', ROUND( AVG(Price), 2)) Avg_Price
 FROM melbourne_prop_sales
 WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
@@ -164,22 +168,10 @@ RENAME COLUMN SellerG TO Seller;
 SELECT Seller, COUNT(Seller) Unit_Sold,
     SUM(CASE WHEN `Type` = 'House' THEN 1 ELSE 0 END) AS House,
     SUM(CASE WHEN `Type` = 'Townhouse' THEN 1 ELSE 0 END) AS Townhouse,
-    SUM(CASE WHEN `Type` LIKE '%Apartment' THEN 1 ELSE 0 END) AS Apartment
+    SUM(CASE WHEN `Type` LIKE '%Apartment' THEN 1 ELSE 0 END) AS Apartment,
+     CONCAT('$', ROUND(AVG(Price),0)) Avg_Seller_Price
 FROM melbourne_prop_sales
 WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
 GROUP BY Seller
 ORDER BY unit_sold DESC
 LIMIT 10;
-
--- AVG SELLER PRICE (ALL)
-SELECT Seller, ROUND(AVG(Price), 0) AVG_Price, COUNT(*) Unit_Involved
-FROM melbourne_prop_sales
-GROUP BY Seller
-ORDER BY AVG(Price);
-
--- AVG SELLER PRICE (ONLY SOLD UNITS)
-SELECT Seller, ROUND(AVG(Price), 0) AVG_Price, COUNT(*) Unit_Involved
-FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
-GROUP BY Seller
-ORDER BY AVG(Price);
