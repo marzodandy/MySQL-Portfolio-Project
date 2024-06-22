@@ -1,6 +1,6 @@
 #AIM
 /*
-The aim of this research is to understand the business' market, goods sales report, customers demographic, and financial condition, .
+This research aims to understand the business market, goods sales report, customer demographic, and financial condition.
 */
 
 #SUMMARY
