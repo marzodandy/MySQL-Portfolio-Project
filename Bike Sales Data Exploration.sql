@@ -5,7 +5,7 @@ This research aims to understand the business market, goods sales report, custom
 
 #SUMMARY
 /*
-1. Revenue growth by 7.13% after the first week, with $361,232 of revenue.
+1. Revenue grew by 7.13% after the first week sales, with $361,232 of revenue.
 2. Most customers are from the United States with 32 customers, followed by Australia with 27 customers.
 3. "Mountain-200 Black, 46" is the highest-demand product.
 4. Adults dominate the customer type by 53%.
