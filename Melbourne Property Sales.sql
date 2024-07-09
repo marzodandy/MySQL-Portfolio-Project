@@ -1,19 +1,19 @@
 #DATA CLEANING AND DATA EXPLORATION WITH MYSQL 
-#ATTENTION: THE DATA IS INCOMPLETE. DATA CLEANING PROCESS ONLY INVOLVED CLEANING PROCESS WITHOUT CHANGING ANY BLANK VALUES INTO ANY OTHER VALUES TO PREVENT MISLEADING RESULTS.
+#ATTENTION: THE ORIGINAL DATA IS INCOMPLETE. DATA CLEANING PROCESS ONLY INVOLVED CLEANING PROCESS WITHOUT CHANGING ANY BLANK VALUES INTO ANY OTHER VALUES TO PREVENT MISLEADING RESULTS.
 
 #AIM
 /*
-- To perform complex data cleaning process, such as transaction, convert column's values, and more
-- To be able to absorb informations from the given sales report, such as various property types, property that sold the most, prices range, etc.
+- To perform complex data cleaning processes, such as transaction, convert column's values, and adjust column numbering
+- To be able to absorb information from the given sales report, such as various property types, property that sold the most, prices range, etc.
 */
 
 #SUMMARY
 /*
 DATA CLEANING
-1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto update numbers.
+1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto-update numbers.
 2. Renaming column names
 3. Reformating "Type" column values to be more readable
-4. Equalize "Date" column length by adding leading 0 to the date so that the year can be extracted
+4. Equalize the "Date" column length by adding a leading 0 to the date, so that the year can be extracted
 
 DATA EXPLORATION
 1. Southbank is the closest area to Melbourne Central Business District, with the distances of 0.7 km and 1.2 km.
@@ -27,7 +27,7 @@ DATA EXPLORATION
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
-6. Average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
+6. The average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
 5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
 6. Nelson is the most trusted seller. Having sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments with his average price of $1,000,709.
 7. Hockingstuart/Advantage and Rosin have the lowest average price at $330,000, involving only 1 unit. Overall, PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
