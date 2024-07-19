@@ -3,17 +3,17 @@
 
 #AIM
 /*
-- To perform complex data cleaning processes, such as transaction, convert column's values, and adjust column numbering
-- To be able to absorb information from the given sales report, such as various property types, property that sold the most, prices range, etc.
+- To perform complex data cleaning process, such as transaction, convert column's values, and more
+- To be able to absorb informations from the given sales report, such as various property types, property that sold the most, prices range, etc.
 */
 
 #SUMMARY
 /*
 DATA CLEANING
-1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto-update numbers.
+1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto update numbers.
 2. Renaming column names
 3. Reformating "Type" column values to be more readable
-4. Equalize the "Date" column length by adding a leading 0 to the date, so that the year can be extracted
+4. Equalize "Date" column length by adding leading 0 to the date so that the year can be extracted
 
 DATA EXPLORATION
 1. Southbank is the closest area to Melbourne Central Business District, with the distances of 0.7 km and 1.2 km.
@@ -27,7 +27,7 @@ DATA EXPLORATION
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
-6. The average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
+6. Average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
 5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
 6. Nelson is the most trusted seller. Having sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments with his average price of $1,000,709.
 7. Hockingstuart/Advantage and Rosin have the lowest average price at $330,000, involving only 1 unit. Overall, PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
@@ -36,6 +36,10 @@ DATA EXPLORATION
 SELECT * FROM melbourne_prop_sales.melbourne_prop_sales;
 
 DESCRIBE melbourne_prop_sales;
+
+#CHECKING DUPLICATES
+SELECT DISTINCT(COUNT(*))
+FROM melbourne_prop_sales;
 
 #REFORMATTING NO. COLUMN
 UPDATE melbourne_prop_sales
@@ -54,27 +58,18 @@ SELECT DISTINCT Suburb, CouncilArea, Regionname
 FROM melbourne_prop_sales
 ORDER BY Regionname;
 
-SELECT `No.`, Address, Suburb, CouncilArea
-FROM melbourne_prop_sales
-WHERE CouncilArea = "";
-
-SELECT *
-FROM melbourne_prop_sales
-WHERE Suburb = 'Fawkner';
-
 -- CLOSEST REGION TO MELBOURNE CBD
 SELECT DISTINCT Distance, Suburb, Regionname
 FROM melbourne_prop_sales
 ORDER BY Distance;
 
-SELECT *
-FROM melbourne_prop_sales
-WHERE Distance = '' AND Regionname = '';
-
 -- TOP 5 BEST-SELLING AREA
+SELECT DISTINCT Method
+FROM melbourne_prop_sales;
+
 SELECT Suburb, COUNT(*) Amount_of_Sold
 FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+WHERE Method != 'PI'
 GROUP BY Suburb
 ORDER BY Amount_of_Sold DESC
 LIMIT 5;
@@ -104,7 +99,7 @@ END;
 -- AMOUNT OF SOLD PROPERTIES WITH AVERAGE PRICE 
 SELECT `Type`, COUNT(`Type`) Amount_of_Sold, CONCAT('$', ROUND(AVG(Price),2)) Avg_Price
 FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+WHERE Method != 'PI'
 GROUP BY `Type`
 ORDER BY Amount_of_Sold DESC;
 
@@ -123,7 +118,7 @@ COMMIT;
 WITH `year` AS (
     SELECT SUBSTR(`Date`, 7, 4) AS year_cvt
     FROM melbourne_prop_sales
-    WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+    WHERE Method != 'PI'
 )
 
 SELECT `year`.year_cvt 'Year', COUNT(*) Amount
@@ -134,14 +129,14 @@ GROUP BY year_cvt;
 -- CHEAPEST PROPERTY SOLD IN THE AREA (SUBURB)
 SELECT Suburb, MIN(Price)
 FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+WHERE Method != 'PI'
 GROUP BY Suburb
 ORDER BY MIN(Price);
 
 -- AVG SOLD PROPERTIES PRICE FOR THE TOP 5 SUBURB
 SELECT Suburb, COUNT(*) Amount_of_Sold, CONCAT('$', ROUND( AVG(Price), 2)) Avg_Price
 FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+WHERE Method != 'PI'
 GROUP BY Suburb
 ORDER BY Amount_of_Sold DESC
 LIMIT 5;
@@ -171,7 +166,7 @@ SELECT Seller, COUNT(Seller) Unit_Sold,
     SUM(CASE WHEN `Type` LIKE '%Apartment' THEN 1 ELSE 0 END) AS Apartment,
      CONCAT('$', ROUND(AVG(Price),0)) Avg_Seller_Price
 FROM melbourne_prop_sales
-WHERE Method != 'PI' AND Method != 'PN' AND Method != 'SN' AND Method != 'W'
+WHERE Method != 'PI'
 GROUP BY Seller
 ORDER BY unit_sold DESC
 LIMIT 10;
