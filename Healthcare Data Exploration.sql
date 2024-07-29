@@ -1,20 +1,20 @@
 #AIM
 /*
-The aim of this project is to answer the questions surrounding the healthcare industry which contained in the related table, 
-such as most the common medical condition found in the patients, treatment duration, ||hospital, insurance, and treatment.||
+The aim of this project is to answer the questions surrounding the healthcare industry which are contained in the related table, 
+such as the most common medical conditions found in the patients, treatment duration, hospital, insurance, and other related aspects.
 */
 
 #SUMMARY
 /*
 PATIENT AND MEDICAL CONDITION EXPLORATION
 1. Arthritis is the most common medical condition found in the data with 9308 patients suffer from it. Followed by diabetes with 9304 patients and hypertension with 9245.
-2. Both male and female have the same risk percentage to suffer from medical condition. Male dominated the record by 50.04%, and female by 49.96%.
-3. Most patients found in the age of 38 (897 patients) and 37 (893 patients). Both covering roughly 1.60% patients from all of the patients' data.
-4. The average duration of treatment from year to year are almost similar, around 15 days. However in 2020-2022, the treatment duration went slightly quicker.
-5. The average duration of treatment for all medical condition lasted for almost 16 days.
+2. Both males and females have the same risk of suffering from medical conditions. Males dominated the record by 50.04%, and females by 49.96%.
+3. Most patients found in the age of 38 (897 patients) and 37 (893 patients). Both cover roughly 1.60% of patients from all of the patients' data.
+4. The average duration of treatment from year to year is almost similar, around 15 days. However, in 2020-2022, the treatment duration went slightly quicker.
+5. The average treatment duration for all medical conditions lasted almost 16 days.
 6. Based on the test results, 18627 patients are considered abnormal, 18517 patients are considered normal, and 18356 patients are considered inconclusive
 7. Lipitor is the most used medication type to cure multiple medical condition with the amount of 11140.
-8. Based on the record, patients with blood type A have more chance to get affected by disease. 6969 A- patients are affected, followed by 6956 A+ patients.
+8. Based on the record, patients with blood type A have a higher chance of getting affected by diseases. 6969 A- patients are affected, followed by 6956 A+ patients.
 
 HOSPITAL EXPLORATION
 Top 5 Hospital with the most amount of patients:
@@ -23,12 +23,12 @@ Top 5 Hospital with the most amount of patients:
 	3. Johnson PLC:	38 patients
 	4. Smith Ltd:	37 patients
 	5. Smith Group:	36 patients
-Based on the "Top 5 Hospital" data, the Smith Group corpopration has the most patients, with the total amount of 156 patients
+Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with a total amount of 156 patients
 
 BILLING AND INSURANCE EXPLORATION
 1. Cigna is the number 1 insurance provider. 11249 patients have trusted Cigna as their insurance provider.
-2. The most expensive bill paid was $52,764. The patient suffered from hyperthension in the age of 51. Insurance provided by Blue Cross.
-3. Obesity is the medical condition that cost the most. Average patients' bill who suffered from obesity cost $25805.97. Followed by:
+2. The most expensive bill paid was $52,764. The patient suffered from hypertension at the age of 51. Insurance was provided by Blue Cross.
+3. Obesity is the medical condition that costs the most. The average patients' bill who suffers from obesity costs $25805.97. Followed by:
 	1. Diabetes: $25638.40
 	2. Asthma: $25635.25
 	3. Arthritis: $25497.32
