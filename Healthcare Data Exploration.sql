@@ -7,7 +7,7 @@ such as the most common medical conditions found in the patients, treatment dura
 #SUMMARY
 /*
 PATIENT AND MEDICAL CONDITION EXPLORATION
-1. Arthritis is the most common medical condition found in the data with 9308 patients suffer from it. Followed by diabetes with 9304 patients and hypertension with 9245.
+1. Arthritis is the most common medical condition found in the data with 9308 patients suffering from it. Followed by diabetes with 9304 patients and hypertension with 9245.
 2. Both males and females have the same risk of suffering from medical conditions. Males dominated the record by 50.04%, and females by 49.96%.
 3. Most patients found in the age of 38 (897 patients) and 37 (893 patients). Both cover roughly 1.60% of patients from all of the patients' data.
 4. The average duration of treatment from year to year is almost similar, around 15 days. However, in 2020-2022, the treatment duration went slightly quicker.
@@ -23,7 +23,7 @@ Top 5 Hospital with the most amount of patients:
 	3. Johnson PLC:	38 patients
 	4. Smith Ltd:	37 patients
 	5. Smith Group:	36 patients
-Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with a total amount of 156 patients
+Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with a total amount of 156 patients.
 
 BILLING AND INSURANCE EXPLORATION
 1. Cigna is the number 1 insurance provider. 11249 patients have trusted Cigna as their insurance provider.
