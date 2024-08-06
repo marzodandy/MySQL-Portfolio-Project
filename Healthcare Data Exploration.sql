@@ -9,8 +9,8 @@ such as the most common medical conditions found in the patients, treatment dura
 PATIENT AND MEDICAL CONDITION EXPLORATION
 1. Arthritis is the most common condition, affecting 9,308 patients, followed by diabetes with 9,304 and hypertension with 9,245.
 2. The gender distribution of medical conditions is nearly equal, with males at 50.04% and females at 49.96%.
-3. The majority of patients are aged 37 (893 patients) and 38 (patients). Each covers roughly about 1.60% of the total patient data.
-4. The average treatment duration is about 15 days per year, though it slightly decreased between 2020 and 2022.
+3. Most patients are aged 37 (893 patients) and 38 (patients). Each covers roughly about 1.60% of the total patient data.
+4. The average treatment duration is about 15 days yearly, though it slightly decreased between 2020 and 2022.
 5. The average treatment duration for all conditions is approximately 16 days.
 6. Of the test results, 18,627 patients are abnormal, 18,517 are normal, and 18,356 are inconclusive.
 7. Lipitor is the most prescribed medication, used by 11,140 patients.
@@ -49,6 +49,34 @@ ORDER BY 1;
 START TRANSACTION;
 ALTER TABLE healthcare_data_cleaned
 ADD `No` INT AUTO_INCREMENT PRIMARY KEY FIRST;
+COMMIT;
+
+#CLEAN UNNECESSARY CHARACTER
+SELECT *
+FROM healthcare_data_cleaned
+WHERE Hospital LIKE '%and%';
+
+SELECT *, TRIM(BOTH 'and' FROM Hospital) Trimmed_Hospital, REPLACE(Hospital, ',', '')
+FROM healthcare_data_cleaned
+WHERE Hospital LIKE '%and%';
+
+-- REMOVING 'AND' STRING
+START TRANSACTION;
+UPDATE healthcare_data_cleaned
+SET Hospital = TRIM(BOTH 'and' FROM Hospital)
+WHERE Hospital LIKE '%and%';
+COMMIT;
+
+-- REMOVE TRAILING COMMAS
+START TRANSACTION;
+UPDATE healthcare_data_cleaned
+SET Hospital = REPLACE(Hospital, ',', '');
+COMMIT;
+
+-- REMOVE LEADING AND TRAILING BLANK SPACE
+START TRANSACTION;
+UPDATE healthcare_data_cleaned
+SET Hospital = TRIM(Hospital);
 COMMIT;
 
 #PATIENT AND MEDICAL CONDITION EXPLORATION
