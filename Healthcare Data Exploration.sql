@@ -1,20 +1,20 @@
 #AIM
 /*
-The aim of this project is to answer the questions surrounding the healthcare industry which are contained in the related table, 
+This project aims to answer the questions surrounding the healthcare industry which are contained in the related table, 
 such as the most common medical conditions found in the patients, treatment duration, hospital, insurance, and other related aspects.
 */
 
 #SUMMARY
 /*
 PATIENT AND MEDICAL CONDITION EXPLORATION
-1. Arthritis is the most common medical condition found in the data with 9308 patients suffering from it. Followed by diabetes with 9304 patients and hypertension with 9245.
-2. Both males and females have the same risk of suffering from medical conditions. Males dominated the record by 50.04%, and females by 49.96%.
-3. Most patients found in the age of 38 (897 patients) and 37 (893 patients). Each covers roughly 1.60% of patients from all of the patients' data.
-4. The average duration of treatment from year to year is almost similar, around 15 days. However, in 2020-2022, the treatment duration went slightly quicker.
-5. The average treatment duration for all medical conditions lasted almost 16 days.
-6. Based on the test results, 18627 patients are considered abnormal, 18517 patients are considered normal, and 18356 patients are considered inconclusive
-7. Lipitor is the most used medication type to cure multiple medical condition with the amount of 11140.
-8. Based on the record, patients with blood type A have a higher chance of getting affected by diseases. 6969 A- patients are affected, followed by 6956 A+ patients.
+1. Arthritis is the most common condition, affecting 9,308 patients, followed by diabetes with 9,304 and hypertension with 9,245.
+2. The gender distribution of medical conditions is nearly equal, with males at 50.04% and females at 49.96%.
+3. The majority of patients are aged 37 (893) or 38 (897), each covering roughly about 1.60% of the total patient data.
+4. The average treatment duration is about 15 days per year, though it slightly decreased between 2020 and 2022.
+5. The average treatment duration for all conditions is approximately 16 days.
+6. Of the test results, 18,627 patients are abnormal, 18,517 are normal, and 18,356 are inconclusive.
+7. Lipitor is the most prescribed medication, used by 11,140 patients.
+8. Patients with blood type A are more affected by diseases, with 6,969 A- and 6,956 A+ patients impacted.
 
 HOSPITAL EXPLORATION
 Top 5 Hospital with the most amount of patients:
@@ -26,9 +26,9 @@ Top 5 Hospital with the most amount of patients:
 Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with a total amount of 156 patients.
 
 BILLING AND INSURANCE EXPLORATION
-1. Cigna is the number 1 insurance provider. 11249 patients have trusted Cigna as their insurance provider.
-2. The most expensive bill paid was $52,764. The patient suffered from hypertension at the age of 51. Insurance was provided by Blue Cross.
-3. Obesity is the medical condition that costs the most. The average patients' bill who suffers from obesity costs $25805.97. Followed by:
+1. Cigna is the number 1 insurance provider, with 11,249 patients using their services.
+2. The highest bill was $52,764 for a 51-year-old hypertension patient Insurance was covered by Blue Cross.
+3. Obesity is the medical condition that costs the most, with an average bill of $25,805.977. Followed by:
 	1. Diabetes: $25638.40
 	2. Asthma: $25635.25
 	3. Arthritis: $25497.32
