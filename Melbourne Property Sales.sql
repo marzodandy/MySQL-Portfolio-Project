@@ -16,7 +16,7 @@ DATA CLEANING
 4. Equalize "Date" column length by adding leading 0 to the date so that the year can be extracted
 
 DATA EXPLORATION
-1. Southbank is the closest area to Melbourne Central Business District, with the distances of 0.7 km and 1.2 km.
+1. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
 2. House is the highest-demand property, with 10,723 sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
 3. Average property prices based on their type:
    House: $1,220,387.36
@@ -27,10 +27,10 @@ DATA EXPLORATION
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
-6. Average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
+6. The average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
 5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
-6. Nelson is the most trusted seller. Having sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments with his average price of $1,000,709.
-7. Hockingstuart/Advantage and Rosin have the lowest average price at $330,000, involving only 1 unit. Overall, PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
+6. Nelson is the most trusted seller and has sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments. His average price of $1,000,709.
+7. PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
 */
 
 SELECT * FROM melbourne_prop_sales.melbourne_prop_sales;
