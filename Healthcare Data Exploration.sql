@@ -9,7 +9,7 @@ such as the most common medical conditions found in the patients, treatment dura
 PATIENT AND MEDICAL CONDITION EXPLORATION
 1. Arthritis is the most common condition, affecting 9,308 patients, followed by diabetes with 9,304 and hypertension with 9,245.
 2. The gender distribution of medical conditions is nearly equal, with males at 50.04% and females at 49.96%.
-3. The majority of patients are aged 37 (893) or 38 (897), each covering roughly about 1.60% of the total patient data.
+3. The majority of patients are aged 37 (893 patients) and 38 (patients). Each covers roughly about 1.60% of the total patient data.
 4. The average treatment duration is about 15 days per year, though it slightly decreased between 2020 and 2022.
 5. The average treatment duration for all conditions is approximately 16 days.
 6. Of the test results, 18,627 patients are abnormal, 18,517 are normal, and 18,356 are inconclusive.
