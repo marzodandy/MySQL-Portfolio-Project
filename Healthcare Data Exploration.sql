@@ -23,11 +23,11 @@ Top 5 Hospital with the most amount of patients:
 	3. Johnson PLC:	38 patients
 	4. Smith Ltd:	37 patients
 	5. Smith Group:	36 patients
-Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with a total amount of 156 patients.
+Based on the "Top 5 Hospital" data, the Smith Group corporation has the most patients, with 156 patients.
 
 BILLING AND INSURANCE EXPLORATION
 1. Cigna is the number 1 insurance provider, with 11,249 patients using their services.
-2. The highest bill was $52,764 for a 51-year-old hypertension patient Insurance was covered by Blue Cross.
+2. The highest bill was $52,764 for a 51-year-old hypertension patient. Insurance was covered by Blue Cross.
 3. Obesity is the medical condition that costs the most, with an average bill of $25,805.977. Followed by:
 	1. Diabetes: $25638.40
 	2. Asthma: $25635.25
