@@ -79,6 +79,17 @@ UPDATE healthcare_data_cleaned
 SET Hospital = TRIM(Hospital);
 COMMIT;
 
+#DATA STANDARDIZATION
+SELECT DISTINCT `No`, Hospital
+FROM healthcare_data_cleaned
+WHERE Hospital REGEXP 'Sons.*Miller';
+
+START TRANSACTION;
+UPDATE healthcare_data_cleaned
+SET Hospital = 'Sons and Miller'
+WHERE Hospital REGEXP 'Sons.*Miller';
+COMMIT;
+
 #PATIENT AND MEDICAL CONDITION EXPLORATION
 -- AMOUNT OF PATIENT BASED ON MEDICAL CONDITION
 SELECT `Medical.Condition`, COUNT(*) Amount
