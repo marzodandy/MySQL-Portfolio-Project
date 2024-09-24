@@ -1,28 +1,30 @@
 #AIM
 /*
-The aim of this research is to understand the condition of the three branches supermarkets which located in Yangon, Mandalay, dan Naypitaw, based on the sales report for the past 3 months.
+This research aims to understand the condition of the three branches of supermarkets located in Yangon, Mandalay, and Naypitaw based on the sales report for the past 3 months.
 */
 
 #SUMMARY
 /*
-1. Yangon has the highest traffic, with 340 customers in total, while Naypyidaw has the lowest customer traffic, with only 328 customers having shopped in it for the past 3 months.
-2. Naypitaw has the highest income out of all 3 branches, which is $5265.18.
-3. Customer numbers decreased at each branch in February.
-4. Yangon has traffic improvement for () % after February.
-5. The most bought product in each branch:
+1. Yangon has the highest traffic, with 340 customers in total. 
+2. Naypyitaw has the lowest customer traffic, with only 328 customers shop there for the past 3 months.
+3. Naypitaw has the highest income out of all 3 branches, which is $5265.18.
+4. Customer numbers decreased at each branch in February.
+5. Yangon has traffic improvement for () % after February.
+6. The most bought product in each branch:
    - Yangon: Home and lifestyle
    - Mandalay: Sports and travel
    - Naypyitaw: Food and beverages
-6. All three branches have an average rating of only around 7.0. 
-7. Sales growth percentage decreased to -5.88%.
-8. Most customers tend to use Ewallet as their payment method. However, in Naypyidaw, customers still prefer to use cash.
-9. Credit card is the least option customers used for payment method.
+7. All three branches have an average rating of only around 7.0. 
+8. Sales growth percentage decreased to -5.88%.
+9. Most customers tend to use Ewallet as their payment method. However, in Naypitaw, customers still prefer to use cash.
+10. Credit cards are the least option customers use for payment methods.
 */
 
+#SUGGESTIONS
 /*
-- All of the three branches need improvements (service, prod quality, etc). Adding 'customer feedback' would be helpful to track customer satisfaction.
-- Optimilize ewallet service
-- etc.etc
+- All branches need improvements in service, product quality, or others to elevate ratings. 
+- Adding 'customer feedback' would help track customer satisfaction after transactions in the cashier.
+- Optimize e-wallet service for branches outside Naypitaw. Offer promotions or discounts to engage more customers to use e-wallet.
 */
 
 SELECT * FROM supermarket_sales.supermarket_sales
