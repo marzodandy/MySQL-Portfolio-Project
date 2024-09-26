@@ -5,16 +5,24 @@ To be able to categorize property for rent in San Fransisco based on the propert
 
 #SUMMARY
 /*
-1. Apartments are the most offered property type for rent, with 912 units available, followed by 621 houses and 246 condominiums.
-2. Average apartments come with 1 bathroom and 1 bedroom. Houses typically have 2 bathrooms and 2 bedrooms, while condominiums and townhouses usually feature 1 bathroom and 2 bedrooms.
-3. Houses are the most widely available property for a week rent under $100, with 120 units averaging $80.95 a week.
-4. Hostels are the cheapest option for a week rent under $100, with 15 units available at an average price of $47.87 a week.
-5. For a week rent over $100, bed and breakfasts are the most affordable, averaging $120 a week.
+GENERAL
+1. Top 3 property types for rent:
+    1. Apartment: 912 units
+    2. Houses: 621 units
+    3. Condominium: 246 units
+2. Average apartments come with 1 bathroom and 1 bedroom. Houses typically offer 2 bathrooms and 2 bedrooms, while condominiums and townhouses usually feature 1 bathroom and 2 bedrooms.
+3. Bed and breakfasts are the most affordable property type, with an average price of $64.1 from 20 units.
+
+SHORT TERM RENTAL
+1. Houses are the most offered property for a week's rent under $100, with 120 units averaging $80.95.
+2. Hostels are the cheapest option for a week's rent under $100, with 15 units available at an average price of $47.87.
+3. For a week's rent over $100, bed and breakfasts are the most affordable property type, averaging $120.
 6. Houses remain the most offered property type, with 354 units available for the price range above $100.
-7. There are 846 properties available for monthly or longer-term rentals.
-8. Hostels are the cheapest long-term rental option, with a minimum stay of 30 days and an average price of $44.50 per night.
-9. A unit of bungalow is available for only $40.00 with minimum nights of 30 days.
-10. In general, bed and breakfast are the most affordable property type, with an average price of $64.1 from 20 units.
+
+LONG TERM RENTAL
+1. There are 846 properties available for monthly or longer-term rentals.
+2. Hostels are the cheapest long-term rental option, with a minimum stay of 30 days and an average price of $44.50 per night.
+3. A unit bungalow is available for only $40.00 with minimum nights of 30 days.
 */
 
 SELECT * FROM property_rentals.property_rentals; 
