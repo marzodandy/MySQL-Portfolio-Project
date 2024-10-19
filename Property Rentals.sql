@@ -35,7 +35,7 @@ LONG TERM RENTAL
 3. If a "user" is looking for the most affordable property in general, bed & breakfasts are available with 20 units.
 4. Based on the amount of units, apartments are the way to go for solo travelers, while 
    houses, condominiums, and townhouses are for a family or a group of travelers.
-5. Looking for a long-term rental? Apartments are the most offered and are available in both cost-friendly and higher-cost categories.
+5. Apartments are the most offered and are available in both cost-friendly and higher-cost categories.
 */
 
 SELECT * FROM property_rentals.property_rentals; 
