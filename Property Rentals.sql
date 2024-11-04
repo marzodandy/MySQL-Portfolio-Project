@@ -20,7 +20,7 @@ SHORT TERM RENTAL
 1. Houses are the most offered property for a week's rent under $100, with 120 units averaging $80.95.
 2. Hostels are the cheapest option for a week's rent under $100, with 15 units available at an average price of $47.87.
 3. For a week's rent over $100, bed and breakfasts are the most affordable property type, averaging $120.
-6. Houses remain the most offered property type, with 354 units available for the price range above $100.
+4. Houses remain the most offered property type, with 354 units available for a price range above $100.
 
 LONG TERM RENTAL
 1. 846 properties are available for longer-term or monthly rentals, dominated by 515 units of apartments.
