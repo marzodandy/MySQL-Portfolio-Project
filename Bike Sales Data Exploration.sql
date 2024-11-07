@@ -19,8 +19,8 @@ This research aims to understand the business market, goods sales report, custom
 #SUGGESTIONS
 /*
 1. The US and Australia are our core strengths. Engage with customers loyally through discounts or other promotions, especially since female customers dominate a significant portion of our market.
-2. With "Mountain-200 Black, 46" being the most desired bike type, (...)
-3. Research needs to be done for other areas to acknowledge the cause of low sales, covering competitors, trends, and (...), particularly Canada as it's the closest country to the US.
+2. With "Mountain-200 Black, 46" being the most desired bike type, we may stock more products to set a balance standard.
+3. Research needs to be done for other areas to acknowledge the cause of low sales, covering competitors, trends, and range affection. Particularly Canada as it's the closest country to the US.
 */
 
 SELECT * FROM bike_sales_report.`cleaned bike sales data`;
