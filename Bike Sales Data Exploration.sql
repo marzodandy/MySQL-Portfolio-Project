@@ -11,8 +11,16 @@ This research aims to understand the business market, goods sales report, custom
 4. Adults dominate the customer type by 53%.
 5. Most customers are female, with the most bought product type being the Mountain-200 Black, 46. 
 6. 66 bikes have been sold in the US, and 63 bikes have been sold in Australia.
-7. Sales are weak in Europe and Canada. The UK has only 9 customers, followed by France with 8 customers, and Germany with only 6 customers.
-8. Canada has only 6 customers. It also has the lowest sales quantity, with only 11 products sold, even though its location is the closest one to the US.
+7. Sales are weak in Europe and Canada. 
+   * The UK has only 9 customers, followed by France with 8 customers, and Germany with only 6 customers.
+   * Canada has only 6 customers. It also has the lowest sales quantity with only 11 products sold.
+*/
+
+#SUGGESTIONS
+/*
+1. The US and Australia are our core strengths. Engage with customers loyally through discounts or other promotions, especially since female customers dominate a significant portion of our market.
+2. With "Mountain-200 Black" being the most desired bike type, 
+3. Research needs to be done for other areas to acknowledge the cause of low sales, covering competitors, trends, and (..), particularly Canada as it's the closest country to the US.
 */
 
 SELECT * FROM bike_sales_report.`cleaned bike sales data`;
