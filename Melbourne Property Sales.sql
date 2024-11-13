@@ -3,34 +3,38 @@
 
 #AIM
 /*
-- To perform complex data cleaning process, such as transaction, convert column's values, and more
-- To be able to absorb informations from the given sales report, such as various property types, property that sold the most, prices range, etc.
+- Perform complex data cleaning processes, such as transactions, convert column values, and more
+- Absorb information from the given sales report, such as various property types, property that sold the most, price ranges, etc.
 */
 
 #SUMMARY
 /*
 DATA CLEANING
-1. Re-sorting the `No.` column and set it to primary key and add auto increment for auto update numbers.
-2. Renaming column names
-3. Reformating "Type" column values to be more readable
-4. Equalize "Date" column length by adding leading 0 to the date so that the year can be extracted
+1. Re-sorted the `No.` column, set it as the primary key, and added auto increment for automation updates.
+2. Renamed column names
+3. Reformatted the "Type" column values to be more readable
+4. Equalize the "Date" column length by adding a leading 0 to the date so the year can be extracted
 
 DATA EXPLORATION
 1. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
-2. House is the highest-demand property, with 10,723 sold, followed by Units/Apartments (3,777) and Townhouses (1,707).
+2. House dominates the market by 84% with 10,723 units sold. Followed by Units/Apartments (3,777) and Townhouses (1,707).
 3. Average property prices based on their type:
    House: $1,220,387.36
    Unit/Apartment: $625,254.43
    Townhouse: $922,893.95
-4. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 sold properties in 2017, a rise of 2,251 properties.
-5. Reservoir is the best-selling area in Melbourne, with 471 properties have been sold. Followed by:
+4. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 sold properties in 2017, a rise of 32% properties.
+5. Reservoir is the leading area in Melbourne, with 471 properties have been sold. Followed by:
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
 6. The average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
-5. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
-6. Nelson is the most trusted seller and has sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments. His average price of $1,000,709.
-7. PRD Nationwide has the lowest average price, at $355,200, involving 5 sold properties.
+7. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
+8. Nelson is the most trusted seller and has sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments.
+   The average price offered for each property type is:
+	Unit/Apartment: $585,291
+	Townhouse: $736,499
+	House: $1,149,112
+9. PRD Nationwide has the lowest average price, at $355,200, involving only 5 sold properties.
 */
 
 SELECT * FROM melbourne_prop_sales.melbourne_prop_sales;
@@ -170,3 +174,9 @@ WHERE Method != 'PI'
 GROUP BY Seller
 ORDER BY unit_sold DESC
 LIMIT 10;
+
+SELECT Seller, `Type`, ROUND(AVG(Price),0) AS Average_Price
+FROM melbourne_prop_sales
+WHERE Method != 'PI' AND Seller = 'Nelson'
+GROUP BY `Type`
+ORDER BY Average_Price;
