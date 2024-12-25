@@ -17,7 +17,7 @@ This research aims to understand the condition of the three supermarket branches
 7. All three branches have an average rating of only around 7.0. 
 8. Sales growth percentage decreased to -5.88%.
 9. Most customers tend to use Ewallet as their payment method. However, in Naypitaw, customers still prefer to use cash.
-10. Credit cards are the least option customers use for payment methods.
+10. "Credit card" is the least option used by customers for payment method.
 */
 
 #SUGGESTIONS
