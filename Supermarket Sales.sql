@@ -1,6 +1,6 @@
 #AIM
 /*
-This research aims to understand the condition of the three branches of supermarkets located in Yangon, Mandalay, and Naypitaw based on the sales report for the past 3 months.
+This research aims to understand the condition of the three supermarket branches located in Yangon, Mandalay, and Naypitaw based on the sales report for the past three months.
 */
 
 #SUMMARY
@@ -9,7 +9,7 @@ This research aims to understand the condition of the three branches of supermar
 2. Naypyitaw has the lowest customer traffic, with only 328 customers shop there for the past 3 months.
 3. Naypitaw has the highest income out of all 3 branches, which is $5265.18.
 4. Customer numbers decreased at each branch in February.
-5. Yangon has traffic improvement for () % after February.
+5. Yangon has a traffic improvement of 35% % in March.
 6. The most bought product in each branch:
    - Yangon: Home and lifestyle
    - Mandalay: Sports and travel
