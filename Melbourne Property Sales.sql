@@ -1,5 +1,9 @@
 #DATA CLEANING AND DATA EXPLORATION WITH MYSQL 
-#ATTENTION: THE ORIGINAL DATA IS INCOMPLETE. DATA CLEANING PROCESS ONLY INVOLVED CLEANING PROCESS WITHOUT CHANGING ANY BLANK VALUES INTO ANY OTHER VALUES TO PREVENT MISLEADING RESULTS.
+/*
+ATTENTION: 
+	THE ORIGINAL DATA IS INCOMPLETE. DATA CLEANING PROCESS ONLY INVOLVED THE CLEANING PROCESS WITHOUT CHANGING ANY BLANK VALUES 
+	INTO ANY OTHER VALUES TO PREVENT MISLEADING RESULTS.
+*/
 
 #AIM
 /*
@@ -22,15 +26,15 @@ DATA EXPLORATION
    House: $1,220,387.36
    Unit/Apartment: $625,254.43
    Townhouse: $922,893.95
-4. Property sales in Melbourne increased from 6,978 sold properties in 2016 to 9,229 sold properties in 2017, a rise of 32% properties.
-5. Reservoir is the leading area in Melbourne, with 471 properties have been sold. Followed by:
+4. Property sales in Melbourne increased by 32%, from 6,978 sold properties in 2016 to 9,229 sold properties in 2017.
+5. Reservoir is the leading area in Melbourne, with 471 sold properties. Followed by:
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
 6. The average property price in Reservoir is $692,485.88, making it the cheapest and the most desirable area to buy property in Melbourne.
 7. The cheapest property was sold in Hawthorn, a unit apartment for $160,000.
 8. Nelson is the most trusted seller and has sold 1,824 properties, including 1,290 houses, 201 townhouses, and 333 apartments.
-   The average price offered for each property type is:
+   The average property price by Nelson for each property type is:
 	Unit/Apartment: $585,291
 	Townhouse: $736,499
 	House: $1,149,112
