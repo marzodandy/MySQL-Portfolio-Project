@@ -58,6 +58,11 @@ ALTER TABLE melbourne_prop_sales
 MODIFY COLUMN `No.` INT AUTO_INCREMENT PRIMARY KEY;
 
 #AREA EXPLORATION
+-- TOTAL SUBURBS
+SELECT COUNT(DISTINCT Suburb)
+FROM melbourne_prop_sales;
+
+-- IDENTIFY BLANK-FILLED COUNCIL AREA IN WESTERN METROPOLITAN
 SELECT DISTINCT CouncilArea, Regionname
 FROM melbourne_prop_sales
 WHERE Regionname = 'Western Metropolitan';
