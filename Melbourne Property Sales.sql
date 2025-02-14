@@ -27,7 +27,8 @@ DATA EXPLORATION
    House: $1,220,387.36
    Unit/Apartment: $625,254.43
    Townhouse: $922,893.95
-5. Reservoir is the leading area in Melbourne, with 471 sold properties. Followed by:
+5. Reservoir is the leading area in Melbourne, with 471 sold properties, involving 316 houses, 98 units/apartments, and 57 townhouses. 
+   Followed by:
    Bentleigh East: 307 units,
    Richmond: 293 units, and
    Brunswick: 245 units
@@ -81,6 +82,14 @@ WHERE Method != 'PI'
 GROUP BY Suburb
 ORDER BY Amount_of_Sold DESC
 LIMIT 5;
+
+SELECT `type`, COUNT(`type`) Total_Property
+FROM melbourne_prop_sales
+WHERE 	
+	suburb = 'Reservoir' AND 
+	method != 'PI'
+GROUP BY `type`
+ORDER BY Total_Property DESC;
 
 #PROPERTY EXPLORATION
 SELECT DISTINCT(`Type`)
