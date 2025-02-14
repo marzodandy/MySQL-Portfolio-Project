@@ -20,13 +20,13 @@ DATA CLEANING
 4. Equalize the "Date" column length by adding a leading 0 to the date so the year can be extracted
 
 DATA EXPLORATION
-1. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
-2. House dominates the market by 84% with 10,723 units sold. Followed by Units/Apartments (3,777) and Townhouses (1,707).
-3. Average property prices based on their type:
+1. Property sales in Melbourne increased by 32%, from 6,978 sold properties in 2016 to 9,229 sold properties in 2017.
+2. Southbank is the closest area to Melbourne Central Business District, with distances of 0.7 km and 1.2 km.
+3. House dominates the market by 84% with 10,723 units sold. Followed by Units/Apartments (3,777) and Townhouses (1,707).
+4. Average property prices based on their type:
    House: $1,220,387.36
    Unit/Apartment: $625,254.43
    Townhouse: $922,893.95
-4. Property sales in Melbourne increased by 32%, from 6,978 sold properties in 2016 to 9,229 sold properties in 2017.
 5. Reservoir is the leading area in Melbourne, with 471 sold properties. Followed by:
    Bentleigh East: 307 units,
    Richmond: 293 units, and
