@@ -5,7 +5,7 @@ This research aims to understand the business market, goods sales report, custom
 
 #SUMMARY
 /*
-1. Revenue grew by 7.13% after the first week's sales by $361,232, dominated by significant demands from December 18th to 20th. 
+1. Revenue grew by 7.13% after the first week's sales by $361,232, influenced by significant demands from December 18th to 20th. 
 2. Most customers came from the United States, with 32 customers. Followed by Australia with 27 customers.
 3. 66 bikes have been sold in the US, and 63 bikes have been sold in Australia.
 4. "Mountain-200 Black, 46" is the highest-demand product.
