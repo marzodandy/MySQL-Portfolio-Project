@@ -5,8 +5,8 @@ This research aims to understand the business market, goods sales report, custom
 
 #SUMMARY
 /*
-1. Revenue grew by 7.13% after the first week's sales by $361,232.
-2. Most customers are from the United States with 32 customers, followed by Australia with 27 customers.
+1. Revenue grew by 7.13% after the first week's sales by $361,232, dominated by significant demands from December 18th to 20th. 
+2. Most customers came from the United States, with 32 customers. Followed by Australia with 27 customers.
 3. 66 bikes have been sold in the US, and 63 bikes have been sold in Australia.
 4. "Mountain-200 Black, 46" is the highest-demand product.
 5. Adults dominate the customer segment by 53%.
@@ -18,8 +18,8 @@ This research aims to understand the business market, goods sales report, custom
 
 #SUGGESTIONS
 /*
-1. The US and Australia are our core strengths. Engage with customers loyally through discounts or other promotions, especially since female customers dominate our market.
-2. With "Mountain-200 Black, 46" being the most desired bike type, we may stock more products to set a balance standard.
+1. Female customers have a strong demand in our market. Provide discounts, bundle packages, and other promotion types to enhance customer engagement.
+2. 2 of the top 3 bike types are black-painted, showing customers' preference for bike colors. Hence, increasing black-painted bike shares is essential.
 3. Research is required for other areas to acknowledge the cause of low sales, covering competitors, trends, and range affection.
 */
 
