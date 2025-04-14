@@ -1,28 +1,29 @@
 #AIM
 /*
-This research aims to understand the condition of the three supermarket branches located in Yangon, Mandalay, and Naypitaw based on the sales report for the past three months.
+This research aims to understand the condition of the three supermarket branches located in Yangon, Mandalay, and Naypitaw
+after the first quarter sales.
 */
 
 #SUMMARY
 /*
 1. Yangon has the highest traffic, with 340 customers in total. 
-2. Naypyitaw has the lowest customer traffic, with only 328 customers shop there for the past 3 months.
-3. Naypitaw has the highest income out of all 3 branches, which is $5265.18.
+2. Naypyitaw only had 328 customers during the first quarter, the lowest traffic compared to other branches.
+3. Naypitaw received a total of $5265.18 in revenue, the highest income branch despite its lower traffic.
 4. Customer numbers decreased at each branch in February.
-5. Yangon has a traffic improvement of 35% % in March.
+5. Yangon had a traffic improvement of 35% % in March.
 6. The most bought product in each branch:
    - Yangon: Home and lifestyle
    - Mandalay: Sports and travel
    - Naypyitaw: Food and beverages
 7. All three branches have an average rating of only around 7.0. 
-8. Sales growth percentage decreased to -5.88%.
-9. Most customers tend to use Ewallet as their payment method. However, in Naypitaw, customers still prefer to use cash.
-10. "Credit card" is the least option used by customers for payment method.
+8. Sales growth percentage decreased to 5.88% collectively.
+9. Most customers tend to use e-wallets as their payment method. However, customers in Naypitaw still prefer to use cash.
+10. "Credit card" is the least used payment option.
 */
 
 #SUGGESTIONS
 /*
-- All branches need improvements in service, product quality, or others to elevate ratings. 
+- All branches need improvements in service, product quality, or other sectors to elevate ratings. 
 - Adding 'customer feedback' would help track customer satisfaction after transactions in the cashier.
 - Optimize e-wallet service for branches outside Naypitaw. Offer promotions or discounts to engage more customers to use e-wallet.
 */
